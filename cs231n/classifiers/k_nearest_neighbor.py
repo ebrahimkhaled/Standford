@@ -27,7 +27,8 @@ class KNearestNeighbor(object):
         ts1 = time.time()
         self.X_train = X
         self.y_train = y
-        ts2 = time.time() ;print ("train" , ts2-ts1)
+        ts2 = time.time() 
+        print ("train" , ts2-ts1)
 
     def predict(self, X, k=1, num_loops=0):
         ts1 = time.time()        
@@ -54,7 +55,8 @@ class KNearestNeighbor(object):
         else:
             raise ValueError('Invalid value %d for num_loops' % num_loops)
         
-        ts2 = time.time() ;print ("predict" , ts2-ts1)
+        ts2 = time.time() 
+	print ("predict" , ts2-ts1)
         return self.predict_labels(dists, k=k)
 
     def compute_distances_two_loops(self, X):
@@ -91,7 +93,8 @@ class KNearestNeighbor(object):
                 pass
 
                 # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-        ts2 = time.time() ;print ("Twoloops" , ts2-ts1)
+        ts2 = time.time() 
+        print ("Twoloops" , ts2-ts1)
         return dists
     tss2 = time.time() 
     print ("_init_" , tss2-tss1)
@@ -123,7 +126,7 @@ class KNearestNeighbor(object):
             pass
         t3 = time.time()
         print ( "Time finish to make the matrix is :", (t3-t2) ) 
-            # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
+        # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ts2 = time.time() 
         print ("oneloops" , ts2-ts1)
         return dists
