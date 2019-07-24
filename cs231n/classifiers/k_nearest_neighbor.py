@@ -154,8 +154,8 @@ class KNearestNeighbor(object):
         #       and two broadcast sums.                                         #
         #########################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-        #dists = np.sqrt( np.sum( (X[: ,np.newaxis , : ] - self.X_train)**2  , 1)  )
-        dists = (X[: ,np.newaxis , : ] - self.X_train)**2 
+        dists = np.sqrt( np.sum( (X[: ,np.newaxis , : ] - self.X_train)**2  , 1)  )
+        #dists = (X[: ,np.newaxis , : ] - self.X_train)**2 
 
         pass
 
