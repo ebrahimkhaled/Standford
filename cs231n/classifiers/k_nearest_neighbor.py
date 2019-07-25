@@ -56,7 +56,7 @@ class KNearestNeighbor(object):
             raise ValueError('Invalid value %d for num_loops' % num_loops)
         
         ts2 = time.time() 
-	print ("predict" , ts2-ts1)
+        print ("predict" , ts2-ts1)
         return self.predict_labels(dists, k=k)
 
     def compute_distances_two_loops(self, X):
