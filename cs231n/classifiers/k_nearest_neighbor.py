@@ -182,6 +182,7 @@ class KNearestNeighbor(object):
         y_pred = np.zeros(num_test)
         y_pred_all = np.zeros((num_test,k) )
         closest_y = np.zeros( (num_test,k) )	
+        ts1 = time.time() 
         for i in range(num_test):
             # A list of length k storing the labels of the k nearest neighbors to
             # the ith test point.
@@ -224,5 +225,6 @@ class KNearestNeighbor(object):
 
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         print (y_pred )
-        ts1 = time.time() ;print ("Predict_labels" , ts2-ts1)
-        return y_pred
+        ts2 = time.time() 
+        print ("Predict_labels" , ts2-ts1)
+        return y_pred 
